@@ -1,0 +1,21 @@
+def nombre():
+    print() # esto es un comentario
+
+
+
+def f1(x):
+    return(x / 2 + 3)
+
+def f2(x):
+    print(x/2+3)
+
+print(f1(5)
+      
+print(f1(5)+20)
+
+a = 3.0
+print(type(a))
+
+colores= ["amarillo","negro","blanco","magenta"]
+print(colores)
+print(len(colores))
