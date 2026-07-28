@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+}
+
+.subtitulo{
+    text-align:center;
+    font-family: tahoma, sans-serif;
+}
+
+
+.mensajeFinal{
+
+    font-size: 15px;
+    text-align: center;
+    font-family: tahoma, sans-serif;
+}
+
+.formulario {
+    border-radius: 200px;
+    text-align: center;
+    font-family: tahoma, sans-serif;
+    width: 300px;
+    height: 25px;
+    border-style: solid;
+
+}
+
+.terminosycondiciones{
+
+    text-align: center;
+    font-style: italic;
+    font-family: tahoma, sans-serif;
+
+}
+
+div{
+
+    text-align: center;
+
+
+}
+
+span{
+
+    color: blue;
+}
+
+.info{
+
+    text-justify: auto;
+    text-align: auto;
+    margin-bottom: 10px;
+
+}
+
+.botonContinuar{
+    padding: 10px;
+    font-size: 25px;
+}
