@@ -1,206 +1,229 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 
-html{
-    scroll-behavior: smooth;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0A0A0A;
+    color: #FFFFFF;
 }
 
-body{
-    background: #f8f9fa;
-}
-
-header{
+header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-    transition: .4s;
-    
+    padding: 20px 60px;
+    background: rgba(10, 10, 10, 0.8);
 }
 
-.navbar{
-    width: 90%;
-    height: 90px;
-    margin: auto;
+.navbar {
+    max-width: 1400px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
-.logo img{
-    width: 60px;
+.logo img {
+    width: 45px;
 }
 
-.logo h1{
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
+.logo h1 {
+    font-size: 28px;
+    color: #FFFFFF;
 }
 
-.menu{
+.logo h1 span {
+    color: #C17A5A;
+}
+
+.menu {
     display: flex;
     list-style: none;
     gap: 35px;
 }
 
-.menu a{
+.menu a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    transition: .3s;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.menu a:hover{
-    color: #ff9800;
+.menu a:hover {
+    color: #C17A5A;
 }
 
-.iconos{
-    display: flex;
-    gap: 25px;
+.menu .nav-adopt {
+    color: #C17A5A;
 }
 
-.iconos a{
-    color: white;
-    font-size: 22px;
-    transition: .3s;
-}
-
-.iconos a:hover{
-    color: #ff9800;
-}
-
-.hero{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)), url("../Img/Cristal.jpeg") ;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    background-size:cover;
-    background-repeat:no-repeat;
-}
-
-.contenidoHero{
-    width: 90%;
-    max-width: 650px;
-    margin-left: 8%;
-}
-
-.contenidoHero h2{
-    color: white;
-    font-size: 60px;
-    line-height: 75px;
-    margin-bottom: 25px;
-}
-
-.contenidoHero p{
-    color: white;
-    font-size: 18px;
-    line-height: 32px;
-    margin-bottom: 40px;
-}
-
-.botonesHero{
+.iconos {
     display: flex;
     gap: 20px;
+}
+
+.iconos a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.iconos a:hover {
+    color: #FFFFFF;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../Img/pets_Fondo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 120px 40px 60px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.contenidoHero {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contenidoHero .frase {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.contenidoHero h2 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.contenidoHero h2 .highlight {
+    color: #C17A5A;
+}
+
+.contenidoHero p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.8;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.botonesHero {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.btnPrincipal{
+.btnPrincipal {
     text-decoration: none;
-    padding: 18px 40px;
-    background: #ff9800;
-    color: white;
-    border-radius: 40px;
-    font-size: 17px;
-    font-weight: 600;
-    transition: .3s;
+    padding: 15px 40px;
+    background: #C17A5A;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.btnPrincipal:hover{
-    background: #e68900;
+.btnPrincipal:hover {
+    background: #A86545;
     transform: translateY(-3px);
 }
 
-.btnSecundario{
+.btnSecundario {
     text-decoration: none;
-    padding: 18px 35px;
-    border: 2px solid white;
-    color: white;
-    border-radius: 40px;
-    font-size: 16px;
-    transition: .3s;
+    padding: 15px 35px;
+    background: transparent;
+    color: #FFFFFF;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-.btnSecundario:hover{
-    background: white;
-    color: #222;
+.btnSecundario:hover {
+    border-color: #C17A5A;
+    color: #C17A5A;
+    transform: translateY(-3px);
 }
 
-.categorias,
-.productosDestacados,
-.adopcion,
-.asesoria,
-.blog,
-.beneficios,
-.opiniones{
-    width: 90%;
-    margin: 100px auto;
+.btnTerciario {
+    text-decoration: none;
+    padding: 15px 35px;
+    background: #2EC4B6;
+    color: #FFFFFF;
+    border-radius: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-footer{
-    width: 100%;
-    padding: 60px;
-    background: #1f2937;
+.btnTerciario:hover {
+    background: #25A89B;
+    transform: translateY(-3px);
 }
 
-@media(max-width:1000px){
-
-    .menu{
-        display:none;
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
     }
 
-    .contenidoHero h2{
-        font-size:45px;
-        line-height:60px;
+    .menu {
+        display: none;
     }
 
-}
-
-@media(max-width:768px){
-
-    .logo h1{
-        font-size:24px;
+    .contenidoHero h2 {
+        font-size: 30px;
     }
 
-    .contenidoHero{
-        margin:0 auto;
-        text-align:center;
+    .contenidoHero p {
+        font-size: 16px;
     }
 
-    .contenidoHero h2{
-        font-size:36px;
-        line-height:48px;
+    .botonesHero {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contenidoHero p{
-        font-size:16px;
+    .btnPrincipal,
+    .btnSecundario,
+    .btnTerciario {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
-
-    .botonesHero{
-        justify-content:center;
-    }
-
 }
