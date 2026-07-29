@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetZone - Crear cuenta</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/StyleRegis.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <h1>Pet<span>Zone</span></h1>
+        </a>
+        <p class="subtitulo">
+            Crea tu cuenta y comienza a disfrutar de una mejor experiencia de compra.
+        </p>
+    </header>
+
+    <main>
+
+        <section class="cubo">
+
+            <form id="formRegistro" novalidate>
+
+                <div class="progreso">
+                    <div class="barra" id="barra"></div>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Correo electrónico</label>
+                    <input
+                        class="formulario"
+                        type="email"
+                        id="correo"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                        autocomplete="email"
+                    >
+                    <small id="mensajeCorreo" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Teléfono</label>
+                    <input
+                        class="formulario"
+                        type="tel"
+                        id="telefono"
+                        placeholder="300 123 4567"
+                        required
+                        autocomplete="tel"
+                    >
+                    <small id="mensajeTelefono" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Ciudad / Municipio</label>
+                    <input
+                        class="formulario"
+                        type="text"
+                        id="ciudad"
+                        placeholder="Bogotá"
+                        required
+                        autocomplete="address-level2"
+                    >
+                    <small id="mensajeCiudad" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Nombre completo</label>
+                    <input
+                        class="formulario"
+                        type="text"
+                        id="nombre"
+                        placeholder="Juan Pérez"
+                        required
+                        autocomplete="name"
+                    >
+                    <small id="mensajeNombre" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Contraseña</label>
+                    <div class="contenedorPassword">
+                        <input
+                            class="formulario"
+                            type="password"
+                            id="password"
+                            placeholder="Mínimo 8 caracteres"
+                            required
+                            autocomplete="new-password"
+                        >
+                        <i class="fa-solid fa-eye" id="ojo"></i>
+                    </div>
+                    <div class="seguridad">
+                        <div class="nivel" id="nivel"></div>
+                    </div>
+                    <small id="textoSeguridad" class="mensaje-info"></small>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Confirmar contraseña</label>
+                    <div class="contenedorPassword">
+                        <input
+                            class="formulario"
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Repite tu contraseña"
+                            required
+                            autocomplete="new-password"
+                        >
+                        <i class="fa-solid fa-eye" id="ojo2"></i>
+                    </div>
+                    <small id="mensajePassword" class="mensaje-error"></small>
+                </div>
+
+                <div class="terminosycondiciones">
+                    <input
+                        type="checkbox"
+                        id="terminos"
+                        required
+                    >
+                    <label for="terminos">
+                        Acepto que me contacten por SMS y WhatsApp.
+                    </label>
+                </div>
+
+                <div class="botonContinuar">
+                    <button type="submit">
+                        <i class="fa-solid fa-user-plus"></i>
+                        Crear cuenta
+                    </button>
+                </div>
+
+            </form>
+
+        </section>
+
+        <section class="mensajeFinal">
+            <p>
+                Al continuar aceptas nuestros
+                <span>Términos de uso</span>
+                y autorizas el tratamiento de tus datos personales de acuerdo con nuestra
+                <span>Política de privacidad</span>.
+            </p>
+        </section>
+
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="contenidoModal">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>¡Registro exitoso!</h2>
+            <p>Tu cuenta ha sido creada correctamente.</p>
+            <button id="cerrarModal">
+                <i class="fa-solid fa-check"></i>
+                Aceptar
+            </button>
+        </div>
+    </div>
+
+    <script src="JS/ScriptRegi.js"></script>
+
+</body>
+</html>

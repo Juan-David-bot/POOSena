@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #C17A5A;
+    --primary-dark: #A86545;
+    --primary-light: #D4A08A;
+    --secondary: #2EC4B6;
+    --success: #27ae60;
+    --error: #e74c3c;
+    --warning: #f39c12;
+    --dark: #1A1A1A;
+    --gray: #888888;
+    --light: #F5F0EB;
+    --white: #FFFFFF;
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 50%, #0A0A0A 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header .logo {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+header .logo:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+header h1 span {
+    color: var(--primary);
+}
+
+header .subtitulo {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    margin-top: 8px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.cubo {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 40px 45px 30px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.cubo:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+}
+
+#formRegistro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.progreso {
+    width: 100%;
+    height: 4px;
+    background: #E8E8E8;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.barra {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.info {
+    color: #555555;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.formulario {
+    width: 100%;
+    padding: 14px 18px;
+    background: #F5F5F5;
+    border: 2px solid #E8E8E8;
+    border-radius: 12px;
+    color: var(--dark);
+    font-size: 15px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.formulario::placeholder {
+    color: #AAAAAA;
+}
+
+.formulario:focus {
+    border-color: var(--primary);
+    background: var(--white);
+    box-shadow: 0 0 0 4px rgba(193, 122, 90, 0.15);
+}
+
+.formulario.error {
+    border-color: var(--error);
+    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.12);
+}
+
+.formulario.success {
+    border-color: var(--success);
+    box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.12);
+}
+
+.contenedorPassword {
+    position: relative;
+    width: 100%;
+}
+
+.contenedorPassword .formulario {
+    padding-right: 48px;
+}
+
+.contenedorPassword i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999999;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.contenedorPassword i:hover {
+    color: var(--primary);
+}
+
+.seguridad {
+    width: 100%;
+    height: 3px;
+    background: #E8E8E8;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.nivel {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nivel.debil {
+    width: 33%;
+    background: var(--error);
+}
+
+.nivel.media {
+    width: 66%;
+    background: var(--warning);
+}
+
+.nivel.fuerte {
+    width: 100%;
+    background: var(--success);
+}
+
+.mensaje-error {
+    color: var(--error);
+    font-size: 12px;
+    min-height: 18px;
+    font-weight: 500;
+}
+
+.mensaje-info {
+    color: #888888;
+    font-size: 12px;
+    min-height: 18px;
+    font-weight: 400;
+}
+
+.mensaje-info.fuerte {
+    color: var(--success);
+}
+
+.terminosycondiciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 5px 0;
+}
+
+.terminosycondiciones input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.terminosycondiciones label {
+    color: #555555;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.terminosycondiciones label:hover {
+    color: var(--dark);
+}
+
+.botonContinuar {
+    margin-top: 10px;
+}
+
+.botonContinuar button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botonContinuar button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(193, 122, 90, 0.35);
+}
+
+.botonContinuar button:active {
+    transform: translateY(0);
+}
+
+.botonContinuar button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.mensajeFinal {
+    max-width: 500px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.mensajeFinal p {
+    color: rgba(255, 255, 255, 0.30);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.mensajeFinal span {
+    color: var(--primary);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mensajeFinal span:hover {
+    color: var(--primary-light);
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.4s ease;
+}
+
+.modal.activo {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.contenidoModal {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 50px 40px 40px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.contenidoModal i {
+    font-size: 64px;
+    color: var(--success);
+    margin-bottom: 15px;
+}
+
+.contenidoModal h2 {
+    color: var(--dark);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contenidoModal p {
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.contenidoModal button {
+    padding: 14px 50px;
+    background: var(--success);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contenidoModal button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(39, 174, 96, 0.35);
+}
+
+@media (max-width: 540px) {
+    body {
+        padding: 20px 15px;
+        justify-content: flex-start;
+        padding-top: 40px;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    header .subtitulo {
+        font-size: 14px;
+        padding: 0 15px;
+    }
+
+    .cubo {
+        padding: 25px 20px 20px;
+        border-radius: 18px;
+    }
+
+    #formRegistro {
+        gap: 14px;
+    }
+
+    .formulario {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+
+    .botonContinuar button {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .contenidoModal {
+        padding: 35px 25px 30px;
+    }
+
+    .contenidoModal i {
+        font-size: 48px;
+    }
+
+    .contenidoModal h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .cubo {
+        padding: 20px 15px 16px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .terminosycondiciones label {
+        font-size: 12px;
+    }
+
+    .contenidoModal {
+        padding: 25px 18px 20px;
+    }
+}
