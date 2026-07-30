@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PetZone - Productos</title>
+    <link rel="stylesheet" href="CSS/StyleProductos.css" />
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Img/Logo_PetZone.png" alt="PetZone" />
+                <h1>Pet<span>Zone</span></h1>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="adopcion.html" class="nav-adopt">❤️ Adopción</a></li>
+                <li><a href="asesoria.html">Asesoría</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="iconos">
+                <a href="#"><i class="fas fa-search"></i></a>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero-productos">
+            <div class="contenidoHero">
+                <h1>Nuestros <span>Productos</span></h1>
+                <p>Encuentra todo lo que tu mejor amigo necesita</p>
+            </div>
+        </section>
+
+        <section class="filtros">
+            <div class="filtros-container">
+                <div class="buscador">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="buscador" placeholder="Buscar productos..." />
+                </div>
+                <div class="filtros-categorias">
+                    <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                    <button class="filtro-btn" data-categoria="alimentos">🍖 Alimentos</button>
+                    <button class="filtro-btn" data-categoria="juguetes">🧸 Juguetes</button>
+                    <button class="filtro-btn" data-categoria="accesorios">🛏️ Accesorios</button>
+                    <button class="filtro-btn" data-categoria="salud">💊 Salud</button>
+                    <button class="filtro-btn" data-categoria="higiene">🧴 Higiene</button>
+                </div>
+                <div class="ordenar">
+                    <label for="ordenar">Ordenar:</label>
+                    <select id="ordenar">
+                        <option value="default">Relevancia</option>
+                        <option value="precio-asc">Precio: menor a mayor</option>
+                        <option value="precio-desc">Precio: mayor a menor</option>
+                        <option value="nombre-asc">A - Z</option>
+                        <option value="nombre-desc">Z - A</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="productos-grid" id="productosGrid">
+        </section>
+
+        <section class="paginacion">
+            <button class="pagina-btn" id="paginaAnterior" disabled>
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div id="paginas"></div>
+            <button class="pagina-btn" id="paginaSiguiente">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3>Pet<span>Zone</span></h3>
+                <p>Todo para el bienestar de tu mejor amigo.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="adopcion.html">Adopción</a></li>
+                    <li><a href="asesoria.html">Asesoría</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +57 300 123 4567</li>
+                    <li><i class="fas fa-envelope"></i> hola@petzone.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Bogotá, Colombia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 <span>PetZone</span>. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="JS/ScriptProductos.js"></script>
+
+</body>
+</html>
