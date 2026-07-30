@@ -7,8 +7,96 @@
      <link rel="stylesheet" href="CSS/StyleIniSecion.css">
 </head>
 <body>
-    
-    
+    <header>
+        <a href="index.html" class="logo">
+            <h1>Pet<span>Zone</span></h1>
+        </a>
+        <p class="subtitulo">
+            Inicia sesión y accede a tu cuenta.
+        </p>
+    </header>
+
+    <main>
+        <section class="cubo">
+
+            <form id="formLogin" novalidate>
+
+                <div class="campo">
+                    <label class="info">Correo electrónico</label>
+                    <input
+                        class="formulario"
+                        type="email"
+                        id="correo"
+                        placeholder="ejemplo@gmail.com"
+                        required
+                        autocomplete="email"
+                    >
+                    <small id="mensajeCorreo" class="mensaje-error"></small>
+                </div>
+
+                <div class="campo">
+                    <label class="info">Contraseña</label>
+                    <div class="contenedorPassword">
+                        <input
+                            class="formulario"
+                            type="password"
+                            id="password"
+                            placeholder="Tu contraseña"
+                            required
+                            autocomplete="current-password"
+                        >
+                        <i class="fa-solid fa-eye" id="ojo"></i>
+                    </div>
+                    <small id="mensajePassword" class="mensaje-error"></small>
+                </div>
+
+                <div class="opciones">
+                    <div class="recordar">
+                        <input type="checkbox" id="recordar">
+                        <label for="recordar">Recordarme</label>
+                    </div>
+                    <a href="#" class="olvidaste">¿Olvidaste tu contraseña?</a>
+                </div>
+
+                <div class="botonContinuar">
+                    <button type="submit">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Iniciar sesión
+                    </button>
+                </div>
+
+                <div class="registro">
+                    <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+                </div>
+
+            </form>
+
+        </section>
+    </main>
+
+    <div class="modal" id="modalError">
+        <div class="contenidoModal">
+            <i class="fa-solid fa-circle-exclamation" style="color: #e74c3c;"></i>
+            <h2>Error al iniciar sesión</h2>
+            <p id="mensajeError">Correo o contraseña incorrectos.</p>
+            <button id="cerrarModalError">
+                <i class="fa-solid fa-check"></i>
+                Intentar de nuevo
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="modalExito">
+        <div class="contenidoModal">
+            <i class="fa-solid fa-circle-check"></i>
+            <h2>¡Bienvenido!</h2>
+            <p>Has iniciado sesión correctamente.</p>
+            <button id="cerrarModalExito">
+                <i class="fa-solid fa-check"></i>
+                Continuar
+            </button>
+        </div>
+    </div>
 </body>
     <Script src="IniSecion.html"></Script>
 </html>
